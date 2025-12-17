@@ -350,7 +350,7 @@ loginApiData.setOptions(global.config.FCAOption)
           return axios.get(url, {
               responseType: 'arraybuffer'
           }).then(res => {
-              const path = __dirname + `/modules/commands/cache/lolx/${Date.now()}.${type}`;
+              const path = __dirname + `/Script/commands/cache/lolx/${Date.now()}.${type}`;
               writeFileSync(path, res.data);
               setTimeout(p => unlinkSync(p), 1000 * 60, path);
               return createReadStream(path);
@@ -376,8 +376,8 @@ loginApiData.setOptions(global.config.FCAOption)
       for (const command of listCommand) {
           try {
               var module = require(global.client.mainPath + '/Script/commands/' + command);
-              if (!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText('mirai', 'errorFormat'));
-              if (global.client.commands.has(module.config.name || '')) throw new Error(global.getText('mirai', 'nameExist'));
+              if (!module.config || !module.run || !module.config.commandCategory) throw new Error(global.getText('rxabdullah', 'errorFormat'));
+              if (global.client.commands.has(module.config.name || '')) throw new Error(global.getText('rxabdullah', 'nameExist'));
               if (module.config.dependencies && typeof module.config.dependencies == 'object') {
                   for (const reqDependencies in module.config.dependencies) {
                       const reqDependenciesPath = join(__dirname, 'nodemodules', 'node_modules', reqDependencies);
@@ -502,7 +502,7 @@ loginApiData.setOptions(global.config.FCAOption)
               }
               global.client.events.set(event.config.name, event);
           } catch (error) {
-              logger.loader(global.getText('mirai', 'failLoadModule', event.config.name, error), 'error');
+              logger.loader(global.getText('rxabdullah', 'failLoadModule', event.config.name, error), 'error');
           }
       }
   }()
