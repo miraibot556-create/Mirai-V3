@@ -2,7 +2,7 @@
   "name": "MARIA V3",
   "version": "3.0.0",
   "description": "A Simple chatbot by rX",
-  "main": "Abdullah.js",
+  "main": "main.js",
   "engines": {
       "node": "20.x",
       "npm": "10.0.0"
