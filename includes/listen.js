@@ -371,23 +371,17 @@ logMessageData.leftParticipantFbId,
   }
 }
 ///////////////////////////////////////
- let form_mm_dd_yyyy = (input = '', split = input.split('/')) => `${split[1]}/${split[0]}/${split[2]}`;
-  let prefix = (global.data.threadData.get(event.threadID) || {}).PREFIX || global.config.PREFIX;
-  let send = (msg, callback) => api.sendMessage(msg, event.threadID, callback, event.messageID);
-  let name = await Users.getNameUser(event.senderID);
-  if ((event.body || '').startsWith(prefix) && event.senderID != api.getCurrentUserID() && !global.config.NDH.includes(event.senderID) && !global.config.ADMINBOT.includes(event.senderID)) {
-     let thuebot;
-   try {
-        thuebot = JSON.parse(require('fs').readFileSync(process.cwd() + '/modules/commands/data/thuebot.json'));
-     } catch {
-        thuebot = [];
-     };
-     let find_thuebot = thuebot.find($ => $.t_id == event.threadID);
-     if (((global.data.threadData.get(event.threadID)?.PREFIX || global.config.PREFIX) + 'callad') != event.args[0]) {
-        if (!find_thuebot) return api.shareContact(`\n❎ ${name} Nhóm đã thuê bot đéo đâu`, global.config.NDH[0], event.threadID);
-        if (new Date(form_mm_dd_yyyy(find_thuebot.time_end)).getTime() <= Date.now()) return api.shareContact(`\n❌: ${name}\nGroup was not approved. Contact bot admin for approval\n⏰ Time: ${moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY || HH:mm:ss")}`, global.config.NDH[0], event.threadID);
-     };
-  };
+let form_mm_dd_yyyy = (input = '', split = input.split('/')) =>
+  `${split[1]}/${split[0]}/${split[2]}`;
+
+let prefix =
+  (global.data.threadData.get(event.threadID) || {}).PREFIX ||
+  global.config.PREFIX;
+
+let send = (msg, callback) =>
+  api.sendMessage(msg, event.threadID, callback, event.messageID);
+
+let name = await Users.getNameUser(event.senderID);
   var gio = moment.tz('Asia/Ho_Chi_Minh').format('DD/MM/YYYY || HH:mm:ss');
         var thu = moment.tz('Asia/Ho_Chi_Minh').format('dddd');
     if (thu == 'Sunday') thu = 'Chủ nhật'
