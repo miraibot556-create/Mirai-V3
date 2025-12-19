@@ -3,8 +3,8 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports.config = {
-  name: "upt",
-  version: "2.0.0",
+  name: "up",
+  version: "2.0.1",
   hasPermssion: 0,
   credits: "rX",
   usePrefix: true,
@@ -93,7 +93,7 @@ module.exports.run = async function ({ api, event }) {
     // 🪪 Footer
     ctx.font = "20px Sans";
     ctx.fillStyle = "#aefcff";
-    ctx.fillText("Powered by rX Bot", canvas.width - 280, canvas.height - 40);
+    ctx.fillText("Thanks for using Maria v3", canvas.width - 280, canvas.height - 40);
 
     // 💾 Save
     const outPath = path.join(__dirname, "cache", `upt_${event.senderID}.png`);
