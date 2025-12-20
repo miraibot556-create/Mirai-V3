@@ -5,7 +5,7 @@ module.exports.config = {
     name: "vip",
     version: "1.0.0",
     hasPermssion: 3, // ADMINBOT only
-    credits: "Rx Abdullah",
+    credits: "rX",
     description: "Manage VIP mode & VIP users",
     commandCategory: "Admin",
     usages: "[on|off|add|remove|list] <userID or reply>",
@@ -13,8 +13,8 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event, args }) {
-    const vipFilePath = path.join(__dirname, "../../Script/commands/cache/vip.json");
-    const vipModePath = path.join(__dirname, "../../Script/commands/cache/vipMode.json");
+    const vipFilePath = path.join(__dirname, "../../modules/commands/rx/vip.json");
+    const vipModePath = path.join(__dirname, "../../modules/commands/rx/vipMode.json");
 
     // ===== Helpers =====
     const loadVIP = () => {
@@ -47,11 +47,11 @@ module.exports.run = async function ({ api, event, args }) {
     switch(subCommand) {
         case "on":
             saveVIPMode(true);
-            return api.sendMessage("> 🎀\n𝐎𝐊 𝐎𝐧𝐥𝐲 𝐕𝐈𝐏 𝐮𝐬𝐞𝐫 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝", event.threadID);
+            return api.sendMessage("> 🎀\n𝐎𝐊 𝐎𝐧𝐥𝐲 𝐕𝐈𝐏 𝐮𝐬𝐞𝐫 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜𝐦𝐝𝐬", event.threadID);
 
         case "off":
             saveVIPMode(false);
-            return api.sendMessage("> 🎀\n𝐃𝐨𝐧𝐞 𝐚𝐥𝐥 𝐮𝐬𝐞𝐫 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝", event.threadID);
+            return api.sendMessage("> 🎀\n𝐃𝐨𝐧𝐞 𝐚𝐥𝐥 𝐮𝐬𝐞𝐫 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜𝐦𝐝𝐬", event.threadID);
 
         case "add":
             if (!targetID) return api.sendMessage("> ❌\n𝐏𝐥𝐞𝐚𝐬𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞 𝐚 𝐮𝐬𝐞𝐫𝐈𝐃 𝐨𝐫 𝐫𝐞𝐩𝐥𝐲 𝐭𝐨 𝐚𝐝𝐝.", event.threadID);
