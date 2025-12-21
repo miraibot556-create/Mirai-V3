@@ -5,7 +5,7 @@ const axios = require("axios");
 module.exports.config = {
   name: "theme",
   version: "3.4.0",
-  hasPermssion: 0,
+  hasPermssion: 2,
   credits: "rX Abdullah",
   description: "Search AI/custom themes with preview and apply by reply (minimal message)",
   commandCategory: "system",
