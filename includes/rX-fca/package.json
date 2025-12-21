@@ -1,20 +1,20 @@
 {
-  "name": "fca-horizon-remastered",
-  "version": "1.5.2",
-  "description": "Facebook-chat-api protect and deploy by Kanzu and HZI Team",
+  "name": "rx-maria",
+  "version": "3.0.0",
+  "description": "Project oF rX",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "Avery, David, Maude, Benjamin, UIRI, KanzuWakazaki",
+  "author": " rX",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KanzuXHorizon/Fca-Horizon-Remastered/issues"
+    "url": "https://github.com/rxabdullah0007/rx-fca/issues"
   },
-  "homepage": "https://github.com/KanzuXHorizon/Fca-Horizon-Remastered#readme",
+  "homepage": "https://github.com/rxabdullah0007/rx-fca#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/KanzuXHorizon/Fca-Horizon-Remastered.git"
+    "url": "git://github.com/rxabdullah0007/rx-fca.git"
   },
   "dependencies": {
     "aes-js": "latest",
@@ -52,7 +52,7 @@
     "ws": "^8.13.0"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": ">=20x"
   },
   "devDependencies": {
     "eslint": "^8.40.0",
@@ -86,9 +86,9 @@
     }
   },
   "keywords": [
-    "Fca horizon",
-    "fca-horizon-remastered",
-    "horizon fca",
-    "horizon"
+    "Fca rX",
+    "maria-fca",
+    "rXdeV",
+    "fca-maria"
   ]
 }
